@@ -3,6 +3,7 @@ from loguru import logger
 from fastapi import FastAPI
 from starlette.middleware.gzip import GZipMiddleware
 from starlette.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from app.core.config import PROJECT_TITLE, PROJECT_DESCRIPTION, PROJECT_VERSION
 from app.core.settings import GLOBAL_CONFIG_OBJ
@@ -35,6 +36,8 @@ def ping_server():
     """
     return {f"I am fine"}
 
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 if __name__ == "__main__":
     uvicorn.run(app, log_level="debug", reload=True)

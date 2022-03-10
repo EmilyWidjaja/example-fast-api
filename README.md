@@ -35,27 +35,22 @@ Access all the APIs through http://localhost:3000/docs
 ## Project Structure
 
 ```
-712 directories, 6828 files
-(venv) (base)  saifulkhan  ~/CODE/COLLABORATION/example-fast-api   main ±  ls
-README.md        app              config           docs             requirements.txt tests            venv
-(venv) (base)  saifulkhan  ~/CODE/COLLABORATION/example-fast-api   main ±  tree app
 app
-├── __init__.py
+├── __init__.py                 /* you can add your simple API endpoints here */
 ├── controllers
 │   ├── __init__.py
-│   └── image_controller.py
+│   └── example_controller.py   /* add your router and inside it add API endpoints */
 ├── core
 │   ├── config.py /* reads the environment variables*/
 │   ├── logging.py
 │   └── settings.py
-├── main.py          /* start entry */
+├── main.py                     /* start entry */
 ├── services
 │   ├── __init__.py
 └── utils
-    ├── __init__.py
+|    ├── __init__.py
 |
-|
-| .env /* input environment variables*/
+└── .env /* input environment variables*/
 ```
 
 # Notes
