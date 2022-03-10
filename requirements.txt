@@ -1,0 +1,12 @@
+black
+cryptography
+PyJWT==1.7.1
+pymongo
+dnspython
+pytest
+pyamg
+fastapi
+uvicorn
+pydantic
+loguru
+python-multipart

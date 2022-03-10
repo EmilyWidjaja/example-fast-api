@@ -1,0 +1,21 @@
+{
+  "allowOrigins": [],
+  "apiUrl": "/api",
+  "csv": "",
+  "mongodb": {
+    "url": "",
+    "db": "ml-models-db",
+    "collection": {
+      "users": "users",
+      "models": "models"
+    }
+  },
+  "jwt": {
+    "algorithm": "RS256",
+    "pvtKey": "config/keys/jwtRS256.key",
+    "pubKey": "config/keys/jwtRS256.key.pub"
+  },
+  "session": {
+    "secret": "Qmg:z@nP(1GEdk("
+  }
+}
