@@ -33,7 +33,7 @@ def ping_server():
     """
     Simple health check
     """
-    return {"ping": f"{PROJECT_TITLE} is live"}
+    return {f"I am fine"}
 
 
 if __name__ == "__main__":

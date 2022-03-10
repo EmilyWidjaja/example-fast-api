@@ -7,9 +7,9 @@ from starlette.config import Config
 
 config = Config(".env")
 
-PROJECT_TITLE: str = config("PROJECT_TITLE", default="Industrial ML Model API")
+PROJECT_TITLE: str = config("PROJECT_TITLE", default="")
 PROJECT_DESCRIPTION: str = config("PROJECT_DESCRIPTION", default="")
-PROJECT_VERSION: str = config("PROJECT_VERSION", default="0.0.1")
+PROJECT_VERSION: str = config("PROJECT_VERSION", default="0.1")
 
 DEBUG: bool = config("DEBUG", cast=bool, default=True)
 LOGGING_LEVEL = logging.DEBUG if DEBUG else logging.INFO

@@ -1,14 +1,12 @@
 from loguru import logger
 from fastapi import APIRouter, Depends, File, UploadFile
 
-from app.utils.jwt_service import validate_user_token
+
+example_router = APIRouter()
 
 
-image_controller = APIRouter()
-
-
-@image_controller.post("/" )
-async def save_model(file: UploadFile = File(...)):
+@example_router.post("/")
+async def upload_file(file: UploadFile = File(...)):
     """
     Upload file and ...
     """
@@ -17,3 +15,12 @@ async def save_model(file: UploadFile = File(...)):
     # TODO
 
     return {"file_name": file.filename}
+
+
+@example_router.get("/")
+async def example_get():
+    """ """
+
+    # TODO
+
+    return {"response": "hello form get!"}

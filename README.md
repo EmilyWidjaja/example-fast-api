@@ -1,11 +1,11 @@
-# API 
+# API
 
 ## Development
 
 Requirements:
 
 - Python 3.9.2
-- MongoDB 
+- MongoDB
 
 Setting up a Python environment:
 
@@ -28,43 +28,39 @@ source ./venv/bin/activate
 uvicorn app.main:app --reload --port 3000
 ```
 
-
 ## Testing APIs
 
 Access all the APIs through http://localhost:3000/docs
 
-
 ## Project Structure
 
 ```
+712 directories, 6828 files
+(venv) (base)  saifulkhan  ~/CODE/COLLABORATION/example-fast-api   main ±  ls
+README.md        app              config           docs             requirements.txt tests            venv
+(venv) (base)  saifulkhan  ~/CODE/COLLABORATION/example-fast-api   main ±  tree app
 app
-├── controllers                   /* Folder: All API entry points */
-│   ├── __init__.py         
-│   ├── image_controller.py
-│   ├── model_controller.py
-│   └── token_controller.py
-├── core                         /* Folder: schemas, configurations etc. */
-│   ├── config.py
-│   ├── logging.py
-│   ├── ml_model.py
-│   ├── settings.py
-│   ├── token_data_model.py
-│   └── token_model.py
 ├── __init__.py
-├── main.py                     /* Server entry point */
-├── services                    /* Folder: services files to query external database */
-│   ├── __init__.py
-│   ├── mongodb_service.py
-└── utils                       /* Folder: additional utility programs, e.g., security */
+├── controllers
+│   ├── __init__.py
+│   └── image_controller.py
+├── core
+│   ├── config.py /* reads the environment variables*/
+│   ├── logging.py
+│   └── settings.py
+├── main.py          /* start entry */
+├── services
+│   ├── __init__.py
+└── utils
     ├── __init__.py
-    ├── jwt_service.py
+|
+|
+| .env /* input environment variables*/
 ```
-
 
 # Notes
 
 - Used MongoDB Atlas free managed database for development and testing.
 - Screenshot of the API testing panel http://localhost:3000/docs
-
 
 <img src="docs/example-swagger-screenshot.png" alt="drawing" width="800"/>
