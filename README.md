@@ -51,11 +51,10 @@ app
 |    ├── __init__.py
 |
 └── .env /* input environment variables*/
+
+└── static /*  htmls */
+
 ```
 
-# Notes
-
-- Used MongoDB Atlas free managed database for development and testing.
-- Screenshot of the API testing panel http://localhost:3000/docs
-
-<img src="docs/example-swagger-screenshot.png" alt="drawing" width="800"/>
+- API testing panel http://localhost:3000/docs
+- Static HTMLs http://localhost:3000/static/index.html
